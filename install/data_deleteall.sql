@@ -1,0 +1,14 @@
+delete from events;
+delete from faqs;
+delete from feedbacks;
+delete from links;
+delete from menuentrys;
+delete from pages;
+delete from parts;
+delete from posts;
+delete from profiles;
+delete from rolls;
+delete from tags;
+delete from users;
+delete from widgetinstances;
+delete from widgets;

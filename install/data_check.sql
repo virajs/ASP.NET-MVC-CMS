@@ -1,0 +1,16 @@
+select count(*) as 'configs' from configs;
+select count(*) as 'events' from events;
+select count(*) as 'fags' from faqs;
+select count(*) as 'feedbacks' from feedbacks;
+select count(*) as 'links' from links;
+select count(*) as 'logs' from logs;
+select count(*) as 'menuentrys' from menuentrys;
+select count(*) as 'pages' from pages;
+select count(*) as 'parts' from parts;
+select count(*) as 'posts' from posts;
+select count(*) as 'profiles' from profiles;
+select count(*) as 'rolls' from rolls;
+select count(*) as 'tags' from tags;
+select count(*) as 'users' from users;
+select count(*) as 'widgets' from widgets;
+select count(*) as 'widgetinstances' from widgetinstances;

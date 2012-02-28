@@ -1,0 +1,126 @@
+- Comment data cleared if incorrect verification code
+- Widget edit did not load state correctly.
+
+
+Group: Registration							- PASS
+	 - Login correct
+	 - Login fails 
+	 - Logoff
+	 - Forgot password 
+         - Register - Existing name fails
+	 - Register - Existing username fails
+ 	 - Register - Existing email fails 
+	 - Register - invalid verification code
+	 - Register - valid, no password supplied
+	 - Register - word and confirm pass do not match
+	- Change profile email
+	- Change password
+	- Add address to profile
+
+
+Group: Entity CRUD actions. CREATE / UPDATE / RETRIEVE / DELETE		- PASS
+	  - Page
+	  - Part
+	  - Link
+	  - Event
+	  - Menu
+	  - Post
+	  - Widget
+	  - Feedback
+	  - Profile
+
+Group: Post Actions	 						- PASS
+	 - By Recent
+	 - By Archives
+	 - By Tags
+	 - By Index
+	 - Paging
+	 - Email
+
+Group: HttpHandlers	 						- PASS
+	 - Css Handler
+	 - Image Handler
+	 - JavaScript Handler
+
+Group: Links/Pages 							- PASS
+	 - About Us
+	 - Contact Us
+	 - News
+	 - Features
+	 - Posts
+	 - Events
+	 - Home
+	 - Logon
+	 - Register
+	 - Forgot Password
+	 - Posts
+	 - Events
+	 - Feedback
+
+Group: System Tasks							- PASS
+	 - Admin login
+	 - Admin Dashboard
+	 - Cache
+	 - Tasks
+	 - Queues
+	 - Logs
+	 - Users
+	 - Diagnostics
+	 - Dashboard
+
+Group: Configuration							- PASS
+	 - Load config
+	 - Update config
+
+Group: Widgets								- PASS
+	- Edit existing widgets from home page
+	- Delete existing widgets from home page
+	- On / Off from home page
+	- Add new widget ( from manage widgets )
+	- Edit widget from manage page
+	- Copy widget from manage page
+	- Move widget to different zone
+	- Specify different sort order for widget
+	- Validate widgets
+
+Group: Appearance							- TEST PARTIAL
+	- Change theme		
+	- Change layout
+	
+Group: Comments								- PASS
+	- Add comment to blog post
+	- Comments displayed for blog posts
+	- Manage comment
+
+
+Group Posts								- PASS
+	- Confirm that a post that is unpublished can not
+ 	be viewed publically.
+	- Confirm setting a category on the posts.
+
+
+Group Images								- PASS
+	- Create new media folder
+	- Add images to media folder
+	- View image gallery for folder
+	- Delete images in folder
+	- Delete image folder
+	
+	- Add images to event
+	- Edit images for event
+	- Delete images for event
+
+
+Groups Page Titles							- PASS
+	- About Us, Contact Us, Features should have page titles 	
+	- Events, Posts should have page titles as "Events", "Posts"
+	- Home should have page title as "Home"
+	- Event details and Post details should have the name of the event/post title as the page title.
+
+Group: Security:							- PASS
+	- Ensure that one user can not delete another's model
+	- Ensure that one user can not copy another's model
+	- Ensure that one user can not clone another's model
+	- Ensure that one user can not activate/deactivate anothers model
+	- Ensure you must be logged in to create post, event, import/export
+	- Ensure you must be admin to run any of the adminstrative tasks.

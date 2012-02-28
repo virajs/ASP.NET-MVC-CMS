@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4990097E-BAFB-433E-A26F-DC8DCFC7601F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComLib.Web.Modules</RootNamespace>
+    <AssemblyName>CommonLibrary.Web.Modules</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonLibrary, Version=0.9.4.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Internal\CommonLibrary.NET\CommonLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyVersion.cs" />
+    <Compile Include="Models.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\Controllers\AccountController.cs" />
+    <Compile Include="Src\Controllers\ArticleController.cs" />
+    <Compile Include="Src\Controllers\HomeController.cs" />
+    <Compile Include="Src\Controllers\LocationController.cs" />
+    <Compile Include="Src\Controllers\SearchController.cs" />
+    <Compile Include="Src\Controllers\ToolsController.cs" />
+    <Compile Include="Src\Extensions\Information\MacroInfo.cs" />
+    <Compile Include="Src\Extensions\Information\StartupInfo.cs" />
+    <Compile Include="Src\Extensions\Information\SystemInfo.cs" />
+    <Compile Include="Src\Extensions\Information\WidgetInfo.cs" />
+    <Compile Include="Src\Extensions\Macros\ShowForRolesMacro.cs" />
+    <Compile Include="Src\Extensions\Macros\CurrentDateMacro.cs" />
+    <Compile Include="Src\Extensions\Macros\WidgetMacro.cs" />
+    <Compile Include="Src\Extensions\Widgets\BlogRoll.cs" />
+    <Compile Include="Src\Extensions\Widgets\Categories.cs" />
+    <Compile Include="Src\Extensions\Widgets\Contact.cs" />
+    <Compile Include="Src\Extensions\Widgets\Feeds.cs" />
+    <Compile Include="Src\Extensions\Widgets\GeoMap.cs" />
+    <Compile Include="Src\Extensions\Widgets\Gravatar.cs" />
+    <Compile Include="Src\Extensions\Widgets\Images.cs" />
+    <Compile Include="Src\Extensions\Widgets\Links.cs" />
+    <Compile Include="Src\Extensions\Widgets\Login.cs" />
+    <Compile Include="Src\Extensions\Widgets\Pages.cs" />
+    <Compile Include="Src\Extensions\Widgets\Part.cs" />
+    <Compile Include="Src\Extensions\Widgets\PostArchives.cs" />
+    <Compile Include="Src\Extensions\Widgets\PostRecent.cs" />
+    <Compile Include="Src\Extensions\Widgets\Search.cs" />
+    <Compile Include="Src\Extensions\Widgets\Tags.cs" />
+    <Compile Include="Src\Extensions\Widgets\Tweets.cs" />
+    <Compile Include="Src\Extensions\Widgets\Users.cs" />
+    <Compile Include="Src\Helpers\HtmlHelperMediaExtensions.cs" />
+    <Compile Include="Src\Services\CMS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Src\Services\ModelService2.cs" />
+    <Compile Include="Src\Services\WidgetService.cs" />
+    <Compile Include="Src\Services\ModelService.cs" />
+    <Compile Include="Src\Services\MembershipService.cs" />
+    <Compile Include="Src\Services\MediaService.cs" />
+    <Compile Include="Src\Settings\SiteSettings.cs" />
+    <Compile Include="Src\ViewModels\MediaUploadFrameViewModel.cs" />
+    <Compile Include="Src\ViewModels\LayoutsViewModel.cs" />
+    <Compile Include="Src\ViewModels\MediaUploadViewModel.cs" />
+    <Compile Include="Src\ViewModels\ImageGalleryViewModel.cs" />
+    <Compile Include="Src\ViewModels\RecentViewModel.cs" />
+    <Compile Include="Src\_Models\Category\Category.cs" />
+    <Compile Include="Src\_Models\Category\CategoryController.cs" />
+    <Compile Include="Src\_Models\Category\CategoryExtensions.cs" />
+    <Compile Include="Src\_Models\Category\CategoryHelper.cs" />
+    <Compile Include="Src\_Models\Category\CategoryRepositorySql.cs" />
+    <Compile Include="Src\_Models\Comment\Comment.cs" />
+    <Compile Include="Src\_Models\Comment\CommentController.cs" />
+    <Compile Include="Src\_Models\Comment\CommentExtensions.cs" />
+    <Compile Include="Src\_Models\Comment\CommentRepositorySql.cs" />
+    <Compile Include="Src\_Models\Event\Event.cs" />
+    <Compile Include="Src\_Models\Event\EventController.cs" />
+    <Compile Include="Src\_Models\Event\EventExtensions.cs" />
+    <Compile Include="Src\_Models\Event\EventHelper.cs" />
+    <Compile Include="Src\_Models\Event\EventRepositorySql.cs" />
+    <Compile Include="Src\_Models\Faq\Faq.cs" />
+    <Compile Include="Src\_Models\Faq\FaqRepositorySql.cs" />
+    <Compile Include="Src\_Models\Favorite\Favorite.cs" />
+    <Compile Include="Src\_Models\Favorite\FavoriteController.cs" />
+    <Compile Include="Src\_Models\Favorite\FavoriteRepositorySql.cs" />
+    <Compile Include="Src\_Models\Feedback\Feedback.cs" />
+    <Compile Include="Src\_Models\Feedback\FeedbackController.cs" />
+    <Compile Include="Src\_Models\Feedback\FeedbackExtensions.cs" />
+    <Compile Include="Src\_Models\Feedback\FeedbackRepositorySql.cs" />
+    <Compile Include="Src\_Models\Flag\Flag.cs" />
+    <Compile Include="Src\_Models\Flag\FlagController.cs" />
+    <Compile Include="Src\_Models\Flag\FlagExtensions.cs" />
+    <Compile Include="Src\_Models\Flag\FlagRepositorySql.cs" />
+    <Compile Include="Src\_Models\Link\Link.cs" />
+    <Compile Include="Src\_Models\Link\LinkController.cs" />
+    <Compile Include="Src\_Models\Link\LinkExtensions.cs" />
+    <Compile Include="Src\_Models\Link\LinkRepositorySql.cs" />
+    <Compile Include="Src\_Models\MediaFile\MediaFile.cs" />
+    <Compile Include="Src\_Models\MediaFile\MediaFileController.cs" />
+    <Compile Include="Src\_Models\MediaFile\MediaFileExtensions.cs" />
+    <Compile Include="Src\_Models\MediaFile\MediaFileMapper.cs" />
+    <Compile Include="Src\_Models\MediaFile\MediaFileRepositorySql.cs" />
+    <Compile Include="Src\_Models\MediaFile\MediaHelper.cs" />
+    <Compile Include="Src\_Models\MediaFolder\MediaFolderExtensions.cs" />
+    <Compile Include="Src\_Models\MediaFolder\MediaFolder.cs" />
+    <Compile Include="Src\_Models\MediaFolder\MediaFolderController.cs" />
+    <Compile Include="Src\_Models\MediaFolder\MediaFolderRepositorySql.cs" />
+    <Compile Include="Src\_Models\MenuEntry\MenuEntryController.cs" />
+    <Compile Include="Src\_Models\MenuEntry\MenuEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Src\_Models\MenuEntry\MenuEntryExtensions.cs" />
+    <Compile Include="Src\_Models\MenuEntry\MenuEntryRepositorySql.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Src\_Models\MenuEntry\MenuEntryHelper.cs" />
+    <Compile Include="Src\_Models\OptionDef\OptionDef.cs" />
+    <Compile Include="Src\_Models\OptionDef\OptionDefExtensions.cs" />
+    <Compile Include="Src\_Models\OptionDef\OptionDefRepositorySql.cs" />
+    <Compile Include="Src\_Models\Page\Page.cs" />
+    <Compile Include="Src\_Models\Page\PageController.cs" />
+    <Compile Include="Src\_Models\Page\PageExtensions.cs" />
+    <Compile Include="Src\_Models\Page\PageHelper.cs" />
+    <Compile Include="Src\_Models\Page\PageRepositorySql.cs" />
+    <Compile Include="Src\_Models\Part\Part.cs" />
+    <Compile Include="Src\_Models\Part\PartController.cs" />
+    <Compile Include="Src\_Models\Part\PartRepositorySql.cs" />
+    <Compile Include="Src\_Models\Post\Post.cs" />
+    <Compile Include="Src\_Models\Post\PostViewModels.cs" />
+    <Compile Include="Src\_Models\Post\PostController.cs" />
+    <Compile Include="Src\_Models\Post\PostExtensions.cs" />
+    <Compile Include="Src\_Models\Post\PostHelper.cs" />
+    <Compile Include="Src\_Models\Post\PostRepositorySql.cs" />
+    <Compile Include="Src\_Models\Profile\Profile.cs" />
+    <Compile Include="Src\_Models\Profile\ProfileController.cs" />
+    <Compile Include="Src\_Models\Profile\ProfileExtensions.cs" />
+    <Compile Include="Src\_Models\Profile\ProfileHelper.cs" />
+    <Compile Include="Src\_Models\Profile\ProfileRepositorySql.cs" />
+    <Compile Include="Src\_Models\Resource\Resource.cs" />
+    <Compile Include="Src\_Models\Resource\ResourceExtensions.cs" />
+    <Compile Include="Src\_Models\Resource\ResourceRepositorySql.cs" />
+    <Compile Include="Src\_Models\Tag\Tag.cs" />
+    <Compile Include="Src\_Models\Tag\TagExtensions.cs" />
+    <Compile Include="Src\_Models\Tag\TagHelper.cs" />
+    <Compile Include="Src\_Models\Tag\TagRepositorySql.cs" />
+    <Compile Include="Src\_Models\Theme\Theme.cs" />
+    <Compile Include="Src\_Models\Theme\ThemeController.cs" />
+    <Compile Include="Src\_Models\Theme\ThemeExtensions.cs" />
+    <Compile Include="Src\_Models\Theme\ThemeRepositorySql.cs" />
+    <Compile Include="Src\_Models\WidgetInstance\WidgetController.cs" />
+    <Compile Include="Src\_Models\WidgetInstance\WidgetExtensions.cs" />
+    <Compile Include="Src\_Models\WidgetInstance\WidgetHelper.cs" />
+    <Compile Include="Src\_Models\WidgetInstance\WidgetInstance.cs" />
+    <Compile Include="Src\_Models\WidgetInstance\WidgetInstanceRepositorySql.cs" />
+    <Compile Include="Src\_Models\Widget\Widget.cs" />
+    <Compile Include="Src\_Models\Widget\WidgetRepositorySql.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonLibrary.Web.Lib\CommonLibrary.Web.Lib.csproj">
+      <Project>{3CEDEA03-BA50-4A71-9CE1-3C5E10C90D45}</Project>
+      <Name>CommonLibrary.Web.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

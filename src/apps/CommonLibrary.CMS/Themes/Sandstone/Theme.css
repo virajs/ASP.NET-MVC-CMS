@@ -1,0 +1,250 @@
+﻿/* ************************************************************************
+Section: HIGH LEVEL AREAS OF A PAGE
+Description: High-level areas/zones of the page.
+NOTE: The zoneleft, zoneright are containers used for widgets.
+************************************************************************** */
+body { background-color:#e9e7de; font-family: Verdana, Helvetica, Sans-Serif; font-size:14px; color: #696969; }
+body a { text-decoration:underline; color:#333333; }
+body a:link { color:#333333; }
+body a:visited { color:#333333; }
+body a:hover { color:Orange; }
+h1, h2, h3, h4, h5 { color:Black; }
+table tr td { vertical-align:top; }
+#page { width: 1150px; margin: auto; border-left:solid 2px #cccccc; border-right:solid 2px #cccccc; background-color:White; }
+#pagebody {	width:1120px; margin: auto; background-color:White; padding: 10px 10px 10px 10px; vertical-align:top; }
+.boldtitle { color:#6dbc1e; font-weight:bold; border-bottom:dotted 1px #cccccc; background-color:#eef7dd; }
+
+
+/* ************************************************************************
+Section: ZONES
+Description: Areas/Zones of the page used for dynamic content loading.
+NOTE: The zoneleft, zoneright are containers used for widgets.
+************************************************************************** */
+#zoneleft {	float:left;  background-color:White; width:220px; margin:5px 5px 5px 5px; }
+#zonebody  { float:left; background-color:White;  width:600px; margin:5px 5px 5px 5px; padding:2px 15px 2px 20px; }
+#zoneright { float:left; background-color:White; width:220px; margin:5px 5px 5px 5px; }
+
+
+/* ************************************************************************
+Section: HEADER 
+Description: Styles for the header and components in the header.
+NOTE: The header has 3 parts <logoarea> <heading> <login> in this order.
+************************************************************************** */
+#header { background-color:Black; font-family:Arial; border-style:none; height:80px; }
+#logoarea { float:left; width:25%; }
+#heading { float:left; margin-top:10px; width:60%; text-align:center;}
+#heading h1 { font-size:30px; color:White; font-weight: bold; margin:0px 5px 4px 5px;}
+#heading h3 { font-size:14px; color:#DDDDDD; font-weight:normal; margin:0px 5px 4px 5px;}
+#login   { width:20%; float:right; text-align:right; color:White; margin-top:10px; }
+#login a { font-size:10px; font-weight:bold; text-decoration: none; padding-right:15px; }
+#login a:link { color: Orange; }
+#login a:visited { color: Orange; }
+#login a:hover { color: White; }
+
+
+/* ************************************************************************
+Section: MENU
+Description: The css here is only for changes for hover and visited.
+************************************************************************** */
+#menu { font-family:Arial; font-size:18px; font-weight:normal; background-color:#e9e7de; text-align:center; border-bottom:solid 4px Black; }
+#menu a { text-decoration: none; color: Black; padding-right:20px; padding-left:20px; }
+#menu a:link { color: Black;  }
+#menu a:visited { color: Black; }
+#menu a:hover { background-color:Black; color:White; }
+
+
+/* ************************************************************************
+Section: FOOTER
+Description: Styling the bottom "footer" of page.
+************************************************************************** */
+#footer { clear:both; background-color:Black; color:Gray; font:normal normal bold 11px Verdana, Arial, Serif; padding: 20px 5px 20px 5px; text-align: center; }
+#footer a { color: White; padding-right:10px; text-decoration: underline; }
+#footer a:link { color: White; }
+#footer a:visited { color: White; }
+#footer a:hover { color: white; }
+#footer .copyright { padding-left: 50px; padding-right: 30px; }
+
+
+/* ************************************************************************
+Section: CONTENT ITEM
+Description: This is for the create/edit areas of any content item(post, 
+event, etc)
+************************************************************************** */
+.contentItem .form { border:dotted 1px #cccccc; padding:4px 4px 4px 4px; }
+.contentItem .header { background-color:#eeeeee; }
+
+
+/* ************************************************************************
+Section: POST
+Description: These are used for styling a post and are used for both on the
+index/listing page and for the details page for both BlogPosts and Events.
+************************************************************************** */
+.posts { width:95%; }
+.post { }
+.post .header { background-color:White; color:#333333; font-weight:bold; font-size:18px; }
+.post .headersmall { background-color:White; color:#333333; font-weight:bold; font-size:16px; }
+.post .user { color:Orange; }
+.post .createdate { color:#4188cf; }
+.post .date { color:#4188cf; }
+.post .time { color:Black; }
+.post .category { color:Orange; }
+.post .address { background-color:#f4f4f4; padding:2px 2px 2px 2px; }
+.post .content { width:80%; }
+.post .tags { color:#999999; font-weight:bold; }
+.post a { color:#333333; font-weight:bold; text-decoration:none; }
+.post a:link { color:#333333; }
+.post a:visited { color:#333333; }
+.post a:hover { color:Orange; }
+.post .actions { background-color:#f4f4f4; padding:3px 0px 3px 0px; }
+.post .actions a { color:#666666; font-weight:bold; text-decoration:none; }
+.post .actions a:link { color:#666666; }
+.post .actions a:visited { color:#666666; }
+.post .actions a:hover { color:Orange; }
+
+
+/* ************************************************************************
+Section: WIDGETS
+Description: These css entries are used for the widgets displayed in the 
+side bar. E.g. Recent Posts, Tags, Archives are all widgets.
+The header corresponds to the text/heading of the widget as in "Archives"
+************************************************************************** */
+.widget { background-color:White; padding-top:5px; text-align:left; }
+.widget ul { list-style: none; margin-left: 8px; padding-left: 1em; text-indent: -1em; }
+.widget li { list-style-type:none; padding-bottom:9px; padding-left:2px; }
+.widget .weditarea { margin-bottom:5px; padding-right:5px; text-align:right; }
+.weditarea a { color:#999999; text-decoration:none; }
+.weditarea a:link { color:#999999; }
+.weditarea a:visited { color:#999999; }
+.weditarea a:hover { color:Black; }
+.widget .wheader { margin-right:12px; text-align:left; color:#711e04; font-weight:bold; font-size:16px; border-bottom:dotted 2px #cccccc; }
+.widget .wtitle  { font-weight:bold; font-size:13px; } 
+.widget .wbody   { padding-right:5px; text-align:left; }
+.widget .wbody a { color:#999999; font-weight:bold; text-decoration:none; }
+.widget .wbody a:link { color:#999999; }
+.widget .wbody a:visited { color:#999999; }
+.widget .wbody a:hover { color:Black; /*#4169e1;*/ font-weight:bold; }
+
+
+/* ************************************************************************
+Section: TAGS
+Description: There are currently only 5 weights being used for the tags.
+************************************************************************** */
+#tagcloud { padding:5px; margin-bottom:10px; text-align:justify; }
+#tagcloud a { text-decoration:none; margin:0px 5px 0px 5px; font-family:Trebuchet MS, Verdana, Arial; }
+#tagcloud a:hover { color:#00cc00; text-decoration:underline; }
+#tagcloud a.size1 { color: Black; font-size: 25px; font-weight:bolder; }
+#tagcloud a.size2 { color: #2e2e2d; font-size:21px; font-weight:bolder; }
+#tagcloud a.size3 { color: #4c4d4c; font-size: 17px; font-weight:bolder; }
+#tagcloud a.size4 { color: #767776; font-size: 13px; }
+#tagcloud a.size5 { color: #a5a6a3; font-size: 10px; }
+
+
+/* ************************************************************************
+Section: PAGER
+Description: CSS for the pager thats used for paging through many posts.
+************************************************************************** */
+pager { margin-left:auto; margin-right:auto; }
+.pager a { text-decoration: none; color:Black; font-size:13px; font-weight:bold; padding:3px 5px 3px 5px; margin:0px 4px 0px 4px; border:solid 1px Black; }
+.pager a:link { color:Black; }
+.pager a:visited { color:Black; }
+.pager a:hover { background-color:#666666; color:White; }
+.pager a.current { background-color:Black; color:White; }
+
+
+/* ************************************************************************ 
+Section: COMMENTS
+Description: Styles for Comments.
+************************************************************************** */
+.comments { }
+.comment .header { background-color:White; color:#333333; font-weight:bold; font-size:20px; }
+.comment .user { font-weight:bold; color:#2166af; }
+.comment .date { color:#4188cf; }
+.comment .time { color:Black; }
+.comment .content { width:90%; padding:5px 5px 5px 5px; }
+.comment .contentbold { width:90%; padding:7px 7px 7px 7px; background-color:#f1f8ff; }
+
+
+/* ************************************************************************ 
+Section: SEARCH
+Description: Styles for search fields area.
+************************************************************************** */
+.search { background-color:Black; padding-left:5px; }
+.search .label { color:White; font-size:12px; font-weight:bold; margin:7px 20px 7px 0px; } 
+.search .example { font-size:10px; color:White; }
+
+
+/* ************************************************************************ 
+Section: TABLES USED FOR SHOWING SYSTEM INFORMATION
+Description: Styles for index/manage entities table's/lists.
+************************************************************************** */
+table.systemlist { width:85%; border-collapse: collapse; }
+table.systemlist td { padding: 7px; border-bottom: solid 1px #e8eef4; }
+table.systemlist th { padding: 6px 5px; text-align: left; background-color: White; border-bottom: solid 4px #e8eef4; }
+.systemlist a { color:#666666; font-weight:bold; text-decoration:none; }
+.systemlist a.visited { color:#666666; }
+table.details td { padding:3px 10px 0px 0px; }
+
+
+/* ************************************************************************ 
+Section: ACTION BUTTONS
+Description: Styles for any button that performs some action.
+************************************************************************** */
+.actionbuttonarea { text-align:center; margin-top:15px; margin-bottom:20px; }
+input.action { border-color:#ea890a; border-width:1px; color:White; font-weight:bold; background-color:Orange; }
+a.actionlink { text-decoration:none; color:#2166af; font-weight:bold; padding-right:15px; }
+a:visited.actionlink { color:#2166af; }
+a.actionbutton { border: solid 1px #ea890a; color:White; font-weight:bold; background-color:Orange; padding: 4px 7px 4px 7px; text-decoration:none; margin-right:20px; }
+a:link.actionbutton { color:White; }
+a:visited.actionbutton { color:White; }
+
+
+/* ************************************************************************
+Section: USER CLOUD
+Description: Various styles for general usage.
+************************************************************************** */
+.usercloud { text-align:center; } 
+.usercloud img { padding-right:7px; padding-bottom:7px; }
+
+
+/* ************************************************************************
+Section: GENERIC FORM / DISPLAY USAGE
+Description: Various styles for general usage : Error, Message, Examples.
+************************************************************************** */
+.label { color:#666666; font-weight:bold; margin:7px 20px 7px 0px; } 
+.example { font-size:10px; color:#999999; }
+.description { font-size:11px;  color:#777777; }
+.error { color:Red; }
+.message { color:#333333; font-weight:bold; }
+.separator { color:#6dbc1e; font:normal normal bold 12px Verdana, Arial, Serif; border-bottom:dotted 1px #cccccc; }
+.centered { margin-left:0px; margin-right:0px;	text-align: left; }
+.status_message { background-color:#e4f2fd; color:Black; border:solid 1px #2166af; padding: 4px 4px 4px 10px; }
+.status_error { color:Red; border:solid 1px #2166af; padding: 4px 4px 4px 10px; }
+
+
+/* ************************************************************************
+Section: Miscellaneous
+Description: Various styles for general usage.
+************************************************************************** */
+
+.actionspacer { margin-left:25px; margin-right:25px; }
+.cell-spacer { width:25px; }
+.clear { clear: both; }
+
+fieldset { margin: 1em 0; padding: 1em; border: 0px; }
+fieldset p { margin: 2px 12px 10px 10px; }
+fieldset label { display: block; color:#999999; font-weight:bold; }
+fieldset label.inline { display: inline; }
+legend { font-size: 1.1em; font-weight: 600; padding: 2px 4px 8px 4px; }
+
+input[type="text"] { width: 200px; border-style:solid; border-color:#cccccc; }
+input.wide { width:450px; }
+input[type="password"] { width: 200px; border: 1px solid #CCC; }
+textarea.text-area { width: 450px; height:200px; border: 1px solid #CCC; }
+
+.field-validation-error { color: #ff0000; }
+.field-validation-valid { display: none; }
+.input-validation-error { border: 1px solid #ff0000; background-color: #ffeeee; }
+.validation-summary-errors { font-weight: bold; color: #ff0000; }
+.validation-summary-valid  { display: none; }
+.display-label, .editor-label { font-weight: bold; }
+.display-label, .editor-label, .display-field, .editor-field { margin: 0.5em 0; }

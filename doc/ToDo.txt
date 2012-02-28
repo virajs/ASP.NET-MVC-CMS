@@ -1,0 +1,57 @@
+Auth.UserId population.
+Users admin section - profile + user data.
+Event - IsOkToServe break b/c IsPublic is False but shows up in recent events but not in details.
+Notification templates location based
+Security attributes and simplicity.
+
+
+Web Seo
+- rss
+- search
+- site index
+- keywords / meta info
+
+
+UI
+- calendar chooser
+- time chooser
+- wysiwyg
+- preview
+- format(c#/javascript)
+- allow html
+- icons - new/edit/copy/del
+- set themes
+
+
+Web Functional
+- trackbacks
+- linkbacks
+- blogml
+- weblog
+- akismet
+- ajax api
+- rest api
+- subdomains
+- emails
+- subscriptions
+- gravatars
+
+
+C#
+- Roles
+- abuse
+- copy
+- localization
+- widgets
+- plugin-pages
+- project separation
+- validation code
+
+
+
+Rss
+keywords/metadata in pages
+twitter updates widget
+
+
+http://search.twitter.com/search.atom?q=ADefWebserver

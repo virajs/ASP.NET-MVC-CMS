@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF85D71D-08ED-4C9C-BD1A-84639E3CF43C}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComLib.CMS</RootNamespace>
+    <AssemblyName>ComLib.CMS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonLibrary, Version=0.9.4.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Internal\CommonLibrary.NET\CommonLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft ASP.NET\ASP.NET MVC 2\\Assemblies\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Admin\AreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CacheController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ConsoleController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ConfigController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CountryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QueryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TaskController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QueueController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LogController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DiagnosticsController.cs" />
+    <Compile Include="Properties\AssemblyVersion.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\cms.mdf" />
+    <Content Include="App_Data\cms_log.ldf">
+      <DependentUpon>cms.mdf</DependentUpon>
+    </Content>
+    <Content Include="Areas\Admin\Views\Console\Info.aspx" />
+    <Content Include="Config\Data\Models.ini.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Config\Data\Resources.csv.config" />
+    <None Include="Config\Data\Rolls.csv.config" />
+    <None Include="Config\Data\Themes.csv.config" />
+    <None Include="Config\Data\Users.csv.config" />
+    <None Include="Config\Data\Pages.xml.config" />
+    <None Include="Config\Data\Parts.xml.config" />
+    <Content Include="Areas\Admin\Views\Console\Email.aspx" />
+    <EmbeddedResource Include="Config\Notifications\feedback.html" />
+    <EmbeddedResource Include="Config\Notifications\password_reminder.html" />
+    <EmbeddedResource Include="Config\Notifications\sendtofriend_post.html" />
+    <EmbeddedResource Include="Config\Notifications\sendtofriend_site.html" />
+    <EmbeddedResource Include="Config\Notifications\welcome.html" />
+    <Content Include="Content\Css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\Css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\Css\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\Css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\Css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\Css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\Css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\Css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\Css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\Css\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Css\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\Css\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\Css\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\Css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\Css\jquery-ui-1.8.7.custom.css" />
+    <Content Include="Content\Images\Common\home.jpg" />
+    <Content Include="Content\Images\Common\home.png" />
+    <Content Include="Content\Images\Generic\calendar.gif" />
+    <Content Include="Content\Images\Generic\item_disable.png" />
+    <Content Include="Content\Images\Generic\item_clone.png" />
+    <Content Include="Content\Images\Generic\item_view.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Areas\Admin\Views\City\ModelForm.ascx" />
+    <Content Include="Areas\Admin\Views\City\ModelList.ascx" />
+    <Content Include="Areas\Admin\Views\State\ModelForm.ascx" />
+    <Content Include="Areas\Admin\Views\State\ModelList.ascx" />
+    <Content Include="Areas\Admin\Views\Country\ModelForm.ascx" />
+    <Content Include="Areas\Admin\Views\Country\ModelList.ascx" />
+    <Content Include="Images\sample_1.jpg" />
+    <Content Include="Images\sample_2.jpg" />
+    <Content Include="Images\sample_3.jpg" />
+    <Content Include="Images\sample_4.jpg" />
+    <Content Include="Images\sample_5.jpg" />
+    <Content Include="Images\sample_6.jpg" />
+    <Content Include="Images\sample_7.jpg" />
+    <Content Include="Images\sample_8.jpg" />
+    <Content Include="Scripts\App\Menu.js" />
+    <Content Include="Scripts\App\EntityManager.js" />
+    <Content Include="Scripts\App\Gallery.js" />
+    <Content Include="Scripts\App\Grid.js" />
+    <Content Include="Scripts\App\Recents.js" />
+    <Content Include="Scripts\App\Location.js" />
+    <Content Include="Scripts\App\RowBuilders.js" />
+    <Content Include="Scripts\App\TimePicker.js" />
+    <Content Include="Scripts\App\Widgets.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.7.custom.min.js" />
+    <Content Include="Views\Account\Remove.aspx" />
+    <Content Include="Views\Article\ModelDetails.ascx" />
+    <Content Include="Views\Article\ModelForm.ascx" />
+    <Content Include="Views\Category\ModelForm.ascx" />
+    <Content Include="Views\Category\ModelList.ascx" />
+    <Content Include="Views\City\ModelForm.ascx" />
+    <Content Include="Views\City\ModelList.ascx" />
+    <Content Include="Views\Country\ModelForm.ascx" />
+    <Content Include="Views\Country\ModelList.ascx" />
+    <Content Include="Views\Home\HiddenVal.aspx" />
+    <Content Include="Views\Home\Frame.aspx" />
+    <Content Include="Views\Home\PagerAjax.aspx" />
+    <Content Include="Views\Home\DragDrop.aspx" />
+    <Content Include="Views\Home\Recents.aspx" />
+    <Content Include="Views\Home\Images.aspx" />
+    <Content Include="Views\Home\Location.aspx" />
+    <Content Include="Views\MediaFile\Create.aspx" />
+    <Content Include="Views\MediaFile\Edit.aspx" />
+    <Content Include="Views\MediaFile\Upload.aspx" />
+    <Content Include="Views\MediaFile\ModelForm.ascx" />
+    <Content Include="Views\MediaFile\ModelList.ascx" />
+    <Content Include="Views\MediaFolder\Details.aspx" />
+    <Content Include="Views\MediaFolder\ModelDetails.ascx" />
+    <Content Include="Views\MediaFolder\ModelForm.ascx" />
+    <Content Include="Views\MediaFolder\ModelList.ascx" />
+    <Content Include="Views\Shared\Controls\MediaUploadFrame.ascx" />
+    <Content Include="Views\Shared\Controls\EntityMenu.ascx" />
+    <Content Include="Views\Shared\Controls\PagerAjax.ascx" />
+    <Content Include="Views\Shared\Controls\RecentProfiles.ascx" />
+    <Content Include="Views\Shared\Controls\SearchEvents.ascx" />
+    <Content Include="Views\Shared\Controls\RecentEvents.ascx" />
+    <Content Include="Views\Shared\Controls\Recents.ascx" />
+    <Content Include="Views\Shared\Controls\MediaUpload.ascx" />
+    <Content Include="Views\Shared\Controls\Location.ascx" />
+    <Content Include="Views\Shared\Controls\ImageGallery.ascx" />
+    <Content Include="Views\Shared\Controls\WidgetManager.ascx" />
+    <Content Include="Views\Shared\Pages\Manage2.aspx" />
+    <Content Include="Views\Shared\Pages\GeneralMessage.aspx" />
+    <Content Include="Views\Shared\Widgets\Contact.ascx" />
+    <Content Include="Views\Shared\Widgets\Categories.ascx" />
+    <Content Include="Views\Shared\Widgets\Links.ascx" />
+    <Content Include="Views\Shared\Widgets\Login.ascx" />
+    <Content Include="Views\Shared\Widgets\Maps.ascx" />
+    <Content Include="Views\State\ModelForm.ascx" />
+    <Content Include="Views\State\ModelList.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.min-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Shared\Site.Scripts.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Images\Common\headerBg.jpg" />
+    <Content Include="Content\Images\Common\logo.gif" />
+    <Content Include="Content\Images\Generic\corner_bl.gif" />
+    <Content Include="Content\Images\Generic\corner_br.gif" />
+    <Content Include="Content\Images\Generic\corner_tl.gif" />
+    <Content Include="Content\Images\Generic\corner_tr.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Cache\List.aspx" />
+    <Content Include="Areas\Admin\Views\Diagnostics\List.aspx" />
+    <Content Include="Areas\Admin\Views\Log\List.aspx" />
+    <Content Include="Areas\Admin\Views\User\List.aspx" />
+    <Content Include="Areas\Admin\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Config\Manage.aspx" />
+    <Content Include="Areas\Admin\Views\Config\List.aspx" />
+    <Content Include="Areas\Admin\Views\Console\Home.aspx" />
+    <Content Include="Captcha.ashx" />
+    <Content Include="Views\Post\ModelDetails.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\Data\Categories.csv.config" />
+    <None Include="Config\Data\Comments.csv.config" />
+    <None Include="Config\Data\Posts.ini.config" />
+    <None Include="Config\Data\MediaFiles.csv.config" />
+    <None Include="Config\Data\MediaFolders.csv.config" />
+    <None Include="Config\Data\Menu.csv.config" />
+    <None Include="Config\Data\OptionDefs.csv.config" />
+    <None Include="Config\Data\Widgets.ini.config" />
+    <None Include="Config\Data\WidgetDefs.csv.config" />
+    <None Include="Config\Data\Location_States.csv.config" />
+    <None Include="Config\Data\Location_Countries.csv.config" />
+    <None Include="Config\Data\Location_Cities.csv.config" />
+    <None Include="Config\Data\Links.csv.config" />
+    <None Include="Config\Data\Images.csv.config" />
+    <None Include="Config\Data\Favorites.csv.config" />
+    <None Include="Config\Data\Events.ini.config" />
+    <None Include="Config\Data\Profiles.csv.config" />
+    <Content Include="Areas\Admin\Views\Console\Summary.aspx" />
+    <Content Include="Areas\Admin\Views\Console\StartupTasks.aspx" />
+    <Content Include="Config\Examples\Import_Event_Example.htm" />
+    <Content Include="Config\Examples\Import_Event_Schema.htm" />
+    <Content Include="Config\Examples\Import_Post_Example.htm" />
+    <Content Include="Config\Examples\Import_Post_Schema.htm" />
+    <Content Include="Content\Css\cmscommon.css" />
+    <Content Include="Content\Images\Generic\item_add.png" />
+    <Content Include="Content\Images\Generic\item_copy.png" />
+    <Content Include="Content\Images\Generic\item_delete.png" />
+    <Content Include="Content\Images\Generic\item_edit.png" />
+    <Content Include="Scripts\App\CommonLib.js" />
+    <Content Include="Scripts\App\CommentList.js" />
+    <Content Include="Scripts\App\Search.js" />
+    <Content Include="Scripts\App\Maps.Bing.js" />
+    <Content Include="Scripts\App\Maps.Google.js" />
+    <Content Include="Scripts\App\PagerAjax.js" />
+    <Content Include="Themes\Sandstone\Theme.css" />
+    <Content Include="Themes\Sandstone\Theme.jpg" />
+    <Content Include="Views\Comment\ModelDetails.ascx" />
+    <Content Include="Views\Comment\ModelForm.ascx" />
+    <Content Include="Views\Comment\ModelList.ascx" />
+    <Content Include="Views\Favorite\ModelList.ascx" />
+    <Content Include="Views\Flag\ModelList.ascx" />
+    <Content Include="Views\Search\SearchResults.ascx" />
+    <Content Include="Views\Search\Search.aspx" />
+    <Content Include="Views\Shared\Controls\Comments.ascx" />
+    <Content Include="Views\Shared\Controls\CommentAdd.ascx" />
+    <Content Include="Views\Shared\Controls\Zone.ascx" />
+    <Content Include="Views\Shared\Controls\EntityActions.ascx" />
+    <Content Include="Views\Shared\Controls\EntityManage.ascx" />
+    <Content Include="Views\Shared\Controls\Statistics.ascx" />
+    <Content Include="Views\Shared\Pages\FeatureNya.aspx" />
+    <Content Include="Views\Shared\Pages\NotAuthorized.aspx" />
+    <Content Include="Views\Shared\Site.DoubleBarRight.Master" />
+    <Content Include="Views\Shared\Site.DoubleBarLeft.Master" />
+    <Content Include="Themes\Default\Theme.css" />
+    <Content Include="Themes\Default\Theme.jpg" />
+    <Content Include="Themes\Emerald\Theme.css" />
+    <Content Include="Themes\Emerald\Theme.jpg" />
+    <Content Include="Views\Theme\Layouts.aspx" />
+    <Content Include="Views\Theme\ModelDetails.ascx" />
+    <Content Include="Views\Theme\ModelForm.ascx" />
+    <Content Include="Views\Theme\ModelList.ascx" />
+    <Content Include="Views\Shared\Site.SingleBarRight.Master" />
+    <Content Include="Views\Shared\Site.SingleBarLeft.Master" />
+    <Content Include="Areas\Admin\Views\Config\Edit.aspx" />
+    <Content Include="Views\Menu\ModelDetails.ascx" />
+    <Content Include="Views\Menu\ModelForm.ascx" />
+    <Content Include="Views\Menu\ModelList.ascx" />
+    <Content Include="Views\Shared\Pages\Rss.aspx" />
+    <Content Include="Views\Shared\Pages\ThankYou.aspx" />
+    <Content Include="Config\Env\Prod.config" />
+    <Content Include="Config\Env\Dev2.config" />
+    <Content Include="Config\Env\Qa.config" />
+    <Content Include="Config\Env\Dev.config" />
+    <Content Include="Areas\Admin\Views\Task\List.aspx" />
+    <Content Include="Areas\Admin\Views\Queue\List.aspx" />
+    <Content Include="Views\Account\ForgotPassword.aspx" />
+    <Content Include="Views\Feedback\Create.aspx" />
+    <Content Include="Views\Feedback\ModelDetails.ascx" />
+    <Content Include="Views\Feedback\ModelForm.ascx" />
+    <Content Include="Views\Feedback\ModelList.ascx" />
+    <Content Include="Views\Event\ModelDetails.ascx" />
+    <Content Include="Views\Event\ModelForm.ascx" />
+    <Content Include="Views\Event\ModelList.ascx" />
+    <Content Include="Views\Link\ModelList.ascx" />
+    <Content Include="Views\Link\ModelDetails.ascx" />
+    <Content Include="Views\Link\ModelForm.ascx" />
+    <Content Include="Views\Page\ModelDetails.ascx" />
+    <Content Include="Views\Page\ModelForm.ascx" />
+    <Content Include="Views\Page\ModelList.ascx" />
+    <Content Include="Views\Part\ModelList.ascx" />
+    <Content Include="Views\Part\ModelDetails.ascx" />
+    <Content Include="Views\Part\ModelForm.ascx" />
+    <Content Include="Views\Post\ModelForm.ascx" />
+    <Content Include="Views\Post\ModelList.ascx" />
+    <Content Include="Views\Profile\ModelForm.ascx" />
+    <Content Include="Views\Profile\ModelDetails.ascx" />
+    <Content Include="Views\Profile\ModelList.ascx" />
+    <Content Include="Views\Shared\Controls\Captcha.ascx" />
+    <Content Include="Views\Shared\Controls\Category.ascx" />
+    <Content Include="Views\Shared\Controls\Dashboard.ascx" />
+    <Content Include="Views\Shared\Controls\Diagnostics.ascx" />
+    <Content Include="Views\Shared\Controls\Footer.ascx" />
+    <Content Include="Views\Shared\Controls\Header.ascx" />
+    <Content Include="Views\Shared\Controls\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Controls\Maps.ascx" />
+    <Content Include="Views\Shared\Controls\Menu.ascx" />
+    <Content Include="Views\Shared\Controls\Feedback.ascx" />
+    <Content Include="Views\Shared\Controls\Pager.ascx" />
+    <Content Include="Views\Shared\Controls\Widget.ascx" />
+    <Content Include="Views\Shared\Pages\Manage.aspx" />
+    <Content Include="Views\Shared\Pages\List.aspx" />
+    <Content Include="Views\Shared\Pages\Edit.aspx" />
+    <Content Include="Views\Shared\Pages\Create.aspx" />
+    <Content Include="Views\Shared\Pages\Deleted.aspx" />
+    <Content Include="Views\Shared\Pages\Details.aspx" />
+    <Content Include="Views\Shared\Pages\Error.aspx" />
+    <Content Include="Views\Shared\Pages\NotFound.aspx" />
+    <Content Include="Views\Shared\Site.Dashboard.Master" />
+    <Content Include="Views\Shared\Widgets\Authors.ascx" />
+    <Content Include="Views\Shared\Widgets\Calendar.ascx" />
+    <Content Include="Views\Shared\Widgets\Comment.ascx" />
+    <Content Include="Views\Shared\Widgets\Image.ascx" />
+    <Content Include="Views\Shared\Widgets\Part.ascx" />
+    <Content Include="Views\Shared\Widgets\PostTopRated.ascx" />
+    <Content Include="Views\Shared\Widgets\Search.ascx" />
+    <Content Include="Views\Shared\Widgets\Subscribe.ascx" />
+    <Content Include="Views\Shared\Widgets\Users.ascx" />
+    <Content Include="Themes\Sapphire\Theme.css" />
+    <Content Include="Themes\Sapphire\Theme.jpg" />
+    <Content Include="Views\Tools\Import.aspx" />
+    <Content Include="Views\Widget\ModelList.ascx" />
+    <Content Include="Views\Widget\ModelDetails.ascx" />
+    <Content Include="Views\Widget\ModelForm.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\CommonLibrary.Web.Lib\CommonLibrary.Web.Lib.csproj">
+      <Project>{3CEDEA03-BA50-4A71-9CE1-3C5E10C90D45}</Project>
+      <Name>CommonLibrary.Web.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\lib\CommonLibrary.Web.Modules\CommonLibrary.Web.Modules.csproj">
+      <Project>{4990097E-BAFB-433E-A26F-DC8DCFC7601F}</Project>
+      <Name>CommonLibrary.Web.Modules</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Email\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49740</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

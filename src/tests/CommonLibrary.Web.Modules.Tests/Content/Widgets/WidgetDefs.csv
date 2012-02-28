@@ -1,0 +1,13 @@
+﻿Name,				Author,	   Email,			IsCacheable,	IsEditable, IsMvc, Path,						SortIndex,	Version,	Url,										IncludeProperties
+"Links",			"kishore", "kishore@h.com", true,			true,		true,	"Widgets\\Links",			1,			"0.9.4.0", "http://commonlibrarynetcms.codeplex.com",	""
+"Part",				"kishore", "kishore@h.com", true,			true,		true,	"Widgets\\Part",			1,			"0.9.4.0", "http://commonlibrarynetcms.codeplex.com",	""
+"PostArchives",		"kishore", "kishore@h.com", true,			true,		true,	"Widgets\\PostArchive",		1,			"0.9.4.0", "http://commonlibrarynetcms.codeplex.com",	""
+"PostRecent",		"kishore", "kishore@h.com", true,			true,		true,	"Widgets\\PostRecent",		1,			"0.9.4.0", "http://commonlibrarynetcms.codeplex.com",	""
+"BlogRoll",			"kishore", "kishore@h.com", true,			true,		true,	"Widgets\\Roll",			1,			"0.9.4.0", "http://commonlibrarynetcms.codeplex.com",	"BloggerName,Url,NumberOfEntries,Format"
+"Tags",				"kishore", "kishore@h.com", true,			true,		true,	"Widgets\\Tags",			1,			"0.9.4.0", "http://commonlibrarynetcms.codeplex.com",	""
+"Users",			"kishore", "kishore@h.com", true,			true,		true,	"Widgets\\Users",			1,			"0.9.4.0", "http://commonlibrarynetcms.codeplex.com",	""
+"Pages",			"kishore", "kishore@h.com", true,			true,		true,	"Widgets\\Pages",			1,			"0.9.4.0", "http://commonlibrarynetcms.codeplex.com",	""
+"Tweets",			"kishore", "kishore@h.com", true,			true,		true,	"Widgets\\Tweets",			1,			"0.9.4.0", "http://commonlibrarynetcms.codeplex.com",	"UserName,Url,NumberOfEntries,Format,OnlySelfTweets"
+"Feeds",			"kishore", "kishore@h.com", true,			true,		true,	"Widgets\\Feeds",			1,			"0.9.4.0", "http://commonlibrarynetcms.codeplex.com",	""
+"Gravatar",			"kishore", "kishore@h.com", true,			true,		true,	"Widgets\\Gravatar",		1,			"0.9.4.0", "http://commonlibrarynetcms.codeplex.com",	""
+"Search",			"kishore", "kishore@h.com", true,			true,		true,	"Widgets\\Search",			1,			"0.9.4.0", "http://commonlibrarynetcms.codeplex.com",	""

@@ -1,0 +1,248 @@
+<html>
+<head></head>
+<body>
+<h1>INSTALLATION</h1> 
+<h3>Requirements</h3> 
+<ol><li>ASP.NET MVC 2 </li> 
+<li>.NET Framework 4.0 </li> 
+<li>Visual Studio 2010 or Visual Studio Web Developer Express 2010</li> 
+<li>CommonLibrary.NET Latest source code compiled to a dll( included ) <a href="http://commonlibrarynet.codeplex.com" class="externalLink">http://commonlibrarynet.codeplex.com<span class="externalLinkIcon"></span></a></li> 
+<li>Sql Server 2005 / 2008 / Express ( optional )</li></ol> 
+    <br />
+<h3>Setup - ( Default : Uses Sql Express )</h3> 
+<ol><li>Download source zip file from releases or source code from svn</li> 
+<li>Open solution file in studio: &lt;ROOT&gt;\src\apps\CommonLibrary.CMS.sln</li> 
+<li>Run the app in studio</li></ol> 
+<br /> 
+<h3>Setup - ( No Database : Use In-Memory Repositories )</h3> 
+<ol><li>Download source zip file from releases or source code from svn</li> 
+<li>Open solution file in studio: &lt;ROOT&gt;\src\apps\CommonLibrary.CMS.sln</li>
+<li>Open web.config and change appsettings </b>useRealData</b> from true to false</li> 
+<li>Run the app in studio</li></ol> 
+<h3>&nbsp;</h3>
+    <h3>Setup - ( Sql 2005 / 2008 Enterprise )</h3> 
+<ol><li>Do steps 1 - 2&nbsp; above ( download source &amp; open solution file ).</li> 
+<li>Run sql schema install file at <b>&lt;ROOT&gt;\install\_install_models_all.sql</b> ( app will auto create sample data ).</li>
+<li>Change db connection in <b>&lt;ROOT&gt;\config\dev.config</b> ( Database: connectstr )</li>
+    <li>In <b>&nbsp;Web.Config</b> change appsettings loaddata to true ( after you run 
+        the app once, change this value back to false so it won&#39;t create the sample data 
+        more than once )</li> 
+<li>Run the app in studio once</li>
+    </ol> 
+<br /> 
+<h3>Accounts</h3> 
+<ol><li>admin  user/pass : &quot;admin&quot;, &quot;password&quot;</li> 
+<li>power  user/pass : &quot;power&quot;, &quot;password&quot;</li> 
+<li>normal user/pass: &quot;user1&quot;, &quot;password&quot;</li></ol> 
+<br /><br /> 
+<h1>CONFIGURATION</h1> 
+<h3>Environments ( dev, qa, prod )</h3>
+<ul>
+    <li>The environments available are dev,qa,prod</li>
+    <li>The environment that the application starts in is specified in web.config in "appsettings" section using key "environment"</li>
+    <li>Dev, Qa, Prod configuration files are located in <b>CommonLibraryNet.Web\Config\Env\</b> and named prod.config, qa.config, and dev.config.</li>
+    <li>The configuration files are in MS .ini format ( this is for now for simplicity and to easily allow for using a dictionary to access the values</li>
+    <li>The configuration files are also inherited which means prod.config inherits the settings from qa.config which inherits the settings from dev.config.
+        This removes the need to duplicate settings for each environment. But if you want to override a setting in dev.config with a production values in prod.config
+        then you just need to place that key/value pair in prod.config.</li>
+</ul>
+    
+
+<h3>Default / Imported Data</h3> 
+<ul><li>All the data that is immediately loaded by the application is imported from either .csv or .ini files located in <b>&lt;root&gt;\src\apps\CommonLibraryNet.Web\Config\Data</b></li> 
+<li>The data is imported into the repositories / system only if it doesn&#39;t already exist in the system. This is accomplished by checking for same records by the values of specific fields</li> 
+<li>Widgets, Posts, Pages, Parts, Links, Rolls, Events, Menu Entries, are all initially imported from their respective .csv or .ini files</li></ul> 
+<br /> 
+
+<h1>Terminology</h1>
+<ul>
+    <li>Model: A model is synonymous with an entity such as Person, BlogPost, Comment.</li>
+    <li>Zone: A area of a page that can contain resusable components</li>
+    <li>Widget: A small reusable component that can be displayed in any of the zones on a page. These usually tend to be completely independent of other widgets.
+                They also can be moved up and down, in and out of zones. E.g. The Recent BlogPosts, Tag Cloud, User Cloud are widgets.</li>
+    <li>Module: A module is a more complex component. In this cms, a module is may typically contain CRUD actions on some Model.
+                For example, The BlogPost and Events are modules which allows CRUD( create, retrieve, update, delete) on BlogPosts and Events respectively.</li>
+</ul>
+<h1>Modules</h1>
+<h2>Overview</h2>
+    <ul>
+        <li>Examples of modules includes Event, BlogPost, Pages, Links</li>
+        <li>Typically are associated with a Model, such as Event, BlogPost, Page, Link</li>
+        <li>Typically support CRUD features ( Create / Retrieve / Update / Delete )</li>
+        <li>Typically have a ModelForm.ascx for creating/editing the model.</li>
+        <li>Typically have a ModelList.ascx for showing a list of all the instances of the 
+            model.</li>
+        <li>Typically have a ModelDetails.ascx for showing the details for a single instance 
+            of the model.</li>
+        <li>Typically may leverage ActiveRecord functionality by extending the model from 
+            ActiveRecordBaseEntity base class</li>
+        <li>Model supports multiple life-cylce methods that the cms system can call. These 
+            include OnBeforeSave, OnAfterSave, OnAfterDelete among others</li>
+        <li>Model supports validation by having a validation method that performs the 
+            validation.</li>
+        <li>Model typically has a Repository associated with it that is responsible for 
+            storing/retriveing the model from some datastore.</li>
+        <li>Model, if extending from ActiveRecordBaseEntity, supports using both an 
+            in-memory based repository as well as a real sql repository.</li>
+        <li>Model typically has at least one controller following the MVC paradigm, named 
+            ModelNameController.cs which extends from EntityController</li>
+        <li>Model and it&#39;s corresponding Sql Repository code can be autogenerated. ( This 
+            involves more elaborate documentation that is not yet available ). Although 
+            there are examples of this in the cms.</li>
+    </ul>
+    <p>
+        &nbsp;</p>
+
+<h2>Creating a new Model</h2>
+    These are the steps to creating a new module from scratch. This example involves 
+    a simple model called &quot;Task&quot; that represents a Task that needs to be 
+    done on by a certain date, with a specific priority. Also take a look at source code for the 
+    Event module/model in project CommonLibrary.Web.Modules in \src\_models\Event\Event.cs 
+    and EventRepository.cs.<ol>
+        <li>Create new class MyTask that extends from ActiveRecordBaseEntity&lt;MyTask &gt; </li>
+        <li>Override the GetValidatorInternal() method to validate itself.</li>
+        <li>Add properties, string Name, int Priority.</li>
+        <li>Create a&nbsp; new repository class MyTaskRepository that extends from 
+            RepositoryBase&lt;MyTask&gt;. Override and provide implementations for the Create and Update and methods.
+            Implement a class ModelRowMapper that can map records from the datastore to instances of your model.</li>
+        <li>To support paging and indexing support for your model when storing in a sql 
+            based repository, make sure you create stored procedures for this. See example 
+            in \install\install_model_event.sql.</li>
+    </ol>
+
+    <p>
+        &nbsp;</p>
+    <h2>Creating the Controller and Views</h2>
+    <ol>
+        <li>Create a new controller &lt;ModelName&gt;Controller.cs that extends from 
+            EntityController&lt;ModelName&gt;</li>
+        <li>Create a new folder called &lt;ModelName&gt;</li>
+        <li>Create new files ModelForm.ascx, ModelList.ascx, ModelDetails.ascx in the new 
+            folder. These are the views for creating/editing, listing, and viewing your 
+            model. Follow examples for BlogPost.</li>
+    </ol>
+    <h2>&nbsp;</h2>
+    <h2>Configuration Overview</h2>
+Configuration data needs to be updated for widgets for the following reasons:
+    <ul>
+        <li>Permissios for the model</li>
+        <li>Admin UI for the model</li>
+        <li>Localization support for the model</li>
+    </ul>
+
+<h2>Configuration Steps</h2>
+    <ol>
+        <li>Define your widget: In WidgetDefs.csv.config, add an entry for your new widget.
+            Make sure to a comma delimited list of additional properties that your widget has, that need to be persisted.
+            e.g. For the gravatar widget, the value is "FullName,Rating,Size,ImageExtension,Email,About"</li>
+        <li>Setup properties for your widget: Add all the additional properties of your new widget that can be edited in the form in "OptionDefs.csv.config"
+            Follow the example for W_Gravatar. All the properties for a widget use the naming convention "W_widgetname" where widgetname is the same
+            as the name you used in WidgetDefs.csv.config. These will be used for automatically creating an widget editor UI for the properties in the widget.</li>
+        <li>Add localization support: Add entries in Resources.csv.config for your widget. Follow the example for W_Gravatar</li>
+    </ol>
+
+
+    <p>&nbsp;</p> 
+
+
+<h1>Widgets</h1>
+<h2>Overview</h2>
+    <ul>
+        <li>Widgets are defined in <b>&lt;root&gt;\src\apps\CommonLibraryNet.Web\Config\Data\WidgetDefs.csv</b></li> 
+        <li>A widget is stored in the database as a single record.</li>
+        <li>Metadata for a widget( author, name, url, version etc ) is stored in the 
+            &quot;WidgetDefs.csv&quot; configuration file instead of using attributes on its class</li>
+        <li>There are 2 ways to render widgets. First is to allow the widget to render itself by overriding IsSelfRenderable property to return true and overriding the Render method to return the html for the widget.
+            The second way is to associate an .ascx control for the widget which renders the 
+            html.</li>
+        <li>Widget instances are defined in <b>&lt;root&gt;\src\apps\CommonLibraryNet.Web\Config\Data\WidgetInstances.csv</b>, but these are only used at startup to create the initial 
+            content for site for the very first time.</li>
+    </ul> 
+
+<h2>Creating a new widget</h2>
+    These are the steps to creating a new widget from scratch. This example involves 
+    a simple widget called &quot;HtmlContent&quot; that simply writes out text supplied.
+    Also take a look at source code for the Gravatar widget in project CommonLibrary.Web.Modules in \src\widgets\Gravatar.cs
+    <ol>
+        <li>Create new class HtmlContent that extends from WidgetInstance</li>
+        <li>Override the IsSelfRenderable method and return true</li>
+        <li>Add a string property called ContentToDisplay</li>
+        <li>Override the Render() method and return ContentToDisplay</li>
+        <li>Finally, the only things left are to configure the widget ( follow the steps 
+            below in &quot;Configuring Widgets&quot; ).</li>
+    </ol>
+
+<h2>Configuring Overview</h2>
+Configuration data needs to be updated for widgets for the following reasons:
+    <ul>
+        <li>To know what widgets are available</li>
+        <li>What properties of the widget need to be stored. By default Header, Zone, DefName, Roles, SortIndex, IsActive, StateData properties 
+            of the WidgetInstance base class are always persisted.
+            However, most widgets will derive from WidgetInstance and have additional properties that need to saved to the database, and also retrieved from the database. These additional properties
+            that need to be saved/restored need to be specified in the WidgetDefs.csv configuration file under the column "IncludeProperties"</li>
+        <li>Also, for localization and display purposes, the names of the properties to 
+            display when creating/editing a widget need to be specified.</li>
+    </ul>
+
+<h2>Configuration Steps</h2>
+    <ol>
+        <li>Define your widget: In WidgetDefs.csv.config, add an entry for your new widget.
+            Make sure to a comma delimited list of additional properties that your widget has, that need to be persisted.
+            e.g. For the gravatar widget, the value is "FullName,Rating,Size,ImageExtension,Email,About"</li>
+        <li>Setup properties for your widget: Add all the additional properties of your new widget that can be edited in the form in "OptionDefs.csv.config"
+            Follow the example for W_Gravatar. All the properties for a widget use the naming convention "W_widgetname" where widgetname is the same
+            as the name you used in WidgetDefs.csv.config. These will be used for automatically creating an widget editor UI for the properties in the widget.</li>
+        <li>Add localization support: Add entries in Resources.csv.config for your widget. Follow the example for W_Gravatar</li>
+    </ol>
+
+
+<h1>CURRENT LIMITATIONS</h1> 
+These are going to be fixed / available in 1 week from the alpha 1 release.<br /> 
+<h3>UI</h3> 
+<ol><li>calendar chooser</li> 
+<li>time chooser</li> 
+<li>wysiwyg</li> 
+<li>preview of posts / events</li> 
+<li>formatting (c#/javascript/css)</li> 
+<li>html in body of posts / events</li> 
+<li>icons new/edit/copy/remove</li> 
+<li>theme changer</li> 
+<li>drag / drop widget changer</li></ol> 
+<br /> 
+<h3>Web</h3> 
+<ol><li>trackbacks</li> 
+<li>linkbacks</li> 
+<li>blogml</li> 
+<li>weblog</li> 
+<li>akismet</li> 
+<li>ajax api</li> 
+<li>rest api</li> 
+<li>emails / newsletters / subscriptions</li></ol> 
+<br /> 
+<h3>Miscellaneous</h3> 
+<ol><li>abuse / flagging of inappropriate comments</li> 
+<li>copy of posts</li> 
+<li>localization</li> 
+<li>search website</li> 
+<li>sitemap</li></ol> 
+<br /><br /> 
+<h1>NOTES</h1> 
+<h3>Authentication</h3> 
+Custom Forms Authentication is used. This means:
+<ol><li>Asp.Net Membership Providers are NOT used</li> 
+<li>A custom &quot;Users&quot; component is used.</li> 
+<li>After signing in and validating the user credentials, FormsAuthentication is activated</li> 
+<li>The username and roles are persisted in a encrypted cookie</li> 
+<li>In Global.asax Application_AuthenticateRequest() handler rebuilds the Context.User ( IPrincipal ) using the cookie information.</li></ol> 
+<br /> 
+<h3>Miscellaneous</h3> 
+1. Tags on posts are not applied immediately. They are queued up and then processing every x number of seconds.<br />2. The repository used for an entity could be anything, an In-Memory, Sql Repository, NHibernated based repository. It&#39;s pluggable.<br />3. Criteria&lt;T&gt; object is used to in Find methods instead of Linq. This is to support possibly using NHibernate<br />4. Inserts / Updates are safe via parameterized queries ( DbParameter usage )<br />5. Stored procs are only used for Getting data by pages <br />6. Finding data by using Criteria doesn&#39;t not use parameterized queries is not that safe for the time being. This will be fixed.<br />7. Entities / Database schema, Sql Repositories can be automatically generated via a &quot;Model generator&quot; see Web.Console and WebModules projects in source.<br /> 
+<h3>More Documentation</h3> 
+The site uses many of the features from <a href="http://commonlibrarynet.codeplex.com" class="externalLink">http://commonlibrarynet.codeplex.com<span class="externalLinkIcon"></span></a> and as a result, the code base for the application<br />becomes very simple and lightweight, particularly the Entities/Models and ActiveRecord/Repositories.<br /><br />Check the documentation on CommonLibrary.NET for more information.<br /><br /> 
+<h3>Source Code - Project Structure</h3> 
+<ol><li>ComLib.Web.Lib - Reusable ASP.NET MVC code is placed in this library</li> 
+<li>ComLib.Web.Modules - Contains all the code for the web modules/models which include ( Blog, Faq, Tag, Feedback, Event, Page, Part, Profile, etc )</li> 
+<li>ComLib.CMS - This is the web project itself that contains the global.asax and all the views.</li></ol> 
+<br />
+</body>
+</html>

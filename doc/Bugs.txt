@@ -1,0 +1,55 @@
+FIXED:
+- The UI for viewing an Event details needs to look better
+- Added a static url e.g. "http://bing.com" to menu item "search" does not property setup the link.
+- No details page for Feedback
+- Deleting, Editing, Copying an entity that has just been deleted throws error.( Happens by 1. deleting, 2. go back in browser, 3. select entity )
+- Comments should only have "delete" and "edit" feature. not "copy" feature
+- Can not change email address on account in this version
+- Post settings "pagesize" is not used
+- Menu / pages are cached, so when adding/removing a menu item may not immediately be reflected in the menu.
+- After creating a user account, the user can not go into the dashboard to change his account info.
+- Roles based access needs to support when showing the dashboard.
+- When creating a widget, the "IsActive" property must be set to true for it show up in the sidebars.
+- Workflow for adding comment needs to be more elegant
+- Page / Url loading seems a bit slow. Need to investigate if it's a url routing issue or my code or both.
+  ( Due to RenderPartial calls in debug mode )
+
+
+FEATURES ADDED:
+- Widgets have custom properties
+- Comments 
+- Web search widget to search web and/or site
+- Formal import/export
+- Google Analytics support
+- Improved admin UI
+- Themes added
+- Layouts added
+- Favorites feature
+- Flagging posts feature
+
+
+
+KNOWN BUGS:
+- Email notifications are queued up before they are sent. The queue processing seems broken only for email, it's fine for applying tags.
+- Page/Post content does not currently support input of html.
+- Remember me feature when logging in does not work
+- Deleting log entries by log level
+- Favorites are not accessbile by user
+- Comment fields should be cleared after adding a comment.
+- Comment verification code needs to be reset after adding a comment.
+
+
+FEATURES FOR NEXT VERSION
+- Editing of CSS
+- Export of data
+- UI fixes(calendar chooser, time chooser, WYSIWYG editor, widget drap & drop)
+- Tracking/linkback support
+- Themes / Layouts support
+- Categories
+- BlogML support
+- Reports / sql quering for admin
+- REST API
+- AJAX calls
+- In-Memory Repositories to be persisted to CSV/Json files. Supporting file based storage.
+- Plugin-Pages ( Pages that can support loading in multiple widgets )
+

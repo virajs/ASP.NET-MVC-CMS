@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3CEDEA03-BA50-4A71-9CE1-3C5E10C90D45}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComLib.Web.Lib</RootNamespace>
+    <AssemblyName>CommonLibrary.Web.Lib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/CommonLibrary.Web.Lib/</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>0</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <CreateWebPageOnPublish>false</CreateWebPageOnPublish>
+    <WebPage>&lt;&gt;</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonLibrary, Version=0.9.4.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Internal\CommonLibrary.NET\CommonLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AdminAuthorizationAttribute.cs" />
+    <Compile Include="Attributes\ExtensionAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Attributes\ModelAttribute.cs" />
+    <Compile Include="Attributes\PropertyDisplayAttribute.cs" />
+    <Compile Include="Attributes\WidgetAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\CommonController.cs" />
+    <Compile Include="Core\Constants.cs" />
+    <Compile Include="Core\IEntityMediaSupport.cs" />
+    <Compile Include="Core\IEntityCachable.cs" />
+    <Compile Include="Core\IEntityCloneable.cs" />
+    <Compile Include="Core\IEntityActivtable.cs" />
+    <Compile Include="Core\IEntitySortable.cs" />
+    <Compile Include="Models\CommentsViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EntityBaseViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EntityDeleteViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EntityDetailsViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EntityFormViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EntityListViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\JsonManageViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\LocationViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\MembershipModels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\Authentication\AuthenticationService.cs" />
+    <Compile Include="Services\Authentication\IAuthenticationService.cs" />
+    <Compile Include="Services\Extensions\IExtensionService.cs" />
+    <Compile Include="Services\Extensions\ExtensionMetaData.cs" />
+    <Compile Include="Services\Extensions\ExtensionService.cs" />
+    <Compile Include="Services\IMediaService.cs" />
+    <Compile Include="Services\IMembershipService.cs" />
+    <Compile Include="Core\Menu.cs" />
+    <Compile Include="Core\ModelFeedSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ModelImportSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ModelPermissionSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ModelSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\EntityActionResult.cs" />
+    <Compile Include="Core\EntityController.cs" />
+    <Compile Include="Core\EntityHelper.cs" />
+    <Compile Include="Core\EntityJsonHelper.cs" />
+    <Compile Include="Core\EntitySettingsHelper.cs" />
+    <Compile Include="Core\EntityViewHelper.cs" />
+    <Compile Include="Core\JsonController.cs" />
+    <Compile Include="Core\ModelViewSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ModulesMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\SyndicationResult.cs" />
+    <Compile Include="Extensions\UrlHelperExtensions.cs" />
+    <Compile Include="Helpers\ModelHelper.cs" />
+    <Compile Include="Properties\AssemblyVersion.cs" />
+    <Compile Include="Extensions\HtmlHelperExtensions.cs" />
+    <Compile Include="Extensions\ModelStateExtensions.cs" />
+    <Compile Include="Extensions\MvcHtmlStringExtensions.cs" />
+    <Compile Include="Helpers\ViewHelper.cs" />
+    <Compile Include="Helpers\PagerHelper.cs" />
+    <Compile Include="Helpers\SecurityHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ConfigurationService.cs" />
+    <Compile Include="Services\DashboardService.cs" />
+    <Compile Include="Services\Information\IInformation.cs" />
+    <Compile Include="Services\Information\IInformationService.cs" />
+    <Compile Include="Services\Information\InfoAttribute.cs" />
+    <Compile Include="Services\Information\InformationService.cs" />
+    <Compile Include="Services\Macros\MacroAttribute.cs" />
+    <Compile Include="Services\Macros\IMacro.cs" />
+    <Compile Include="Services\Macros\IMacroService.cs" />
+    <Compile Include="Services\Macros\MacroParameter.cs" />
+    <Compile Include="Services\Macros\MacroService.cs" />
+    <Compile Include="Settings\EmailSettings.cs" />
+    <Compile Include="Settings\GeneralSettings.cs" />
+    <Compile Include="ViewModels\RecentItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

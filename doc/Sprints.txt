@@ -1,0 +1,54 @@
+
+Sprint		Type,			Group,		Points,		Description
+
+SPRINT 1:
+Points: 8
+Duration:   1.5 weeks
+1,			Story,			Docs,		1,			Developer documentation
+1,			Story,			Docs,		2,			User documentation
+1,			Story,			Docs,		2,			Introduction video
+1,			Story,			Docs,		1,			CodeHelix Solutions reference on CMS
+
+
+SPRINT 2: 
+Points: 10
+Duration:  1.5 weeks
+2,			Story,			Page,  		2,			Page needs support for macros
+2,			Story,			Page,		1, 			Page needs support for published/non-published
+2,			Story,			Page,  		2,			Page needs support for ownership and roles for editing/deleting
+2,			Story,			Page,		1,			Page needs be setup to specify a title in the browser tab
+2,			Story,			Macro,		2,			Macro parsing needs unit testing and fixes for escaping the characters
+
+
+SPRINT 3:
+Duration: 1.5 weeks
+Points:	13
+3,			Story,			Page,		4,			Page needs a wysiwyg editor
+3,			Story,			Macro, 		2			More samples ( maps and gallery )
+3,			Story,			Widget,  	2,			Custom user defined editor
+3,			Story,			Widget,		4, 			Quick editor for home page
+3,			Story,			Widget,  	3,			Additional widgets ( login, registration, blogroll, twitter, feed )
+
+
+SPRINT 4:
+Duration: 1.5 weeks
+Points: 10
+4,			Story,			Extension,	5,			Formal structure and development
+4,			Story,			Extension, 	3,			Cache Manager extension
+4,			Story,			Extension,	2,			Develop more use cases
+
+
+SPRINT 5:
+Duration: 1.5 weeks
+Points: 10
+5,			Story,			Grid,		5,			Grid settings ( page size etc )
+5,			Story,			Grid, 		3,			UI Cleanup
+5,			Story,			Grid,		2,			Column selection	
+5,			Story,			Grid,		2,			Column Ordering
+5,			Story,			Grid,		2,			Column searching
+
+media
+	- lightbox
+	- improved gallery
+	- embed into page
+

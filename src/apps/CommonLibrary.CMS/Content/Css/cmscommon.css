@@ -1,0 +1,91 @@
+﻿/* ************************************************************************ 
+Section: STYLES FOR ADMIN AND AREAS THAT DO NOT REQURIE THEMES.
+Description: Styles for index/manage entities table's/lists.
+************************************************************************** */
+table.systemlist { border-collapse: collapse; }
+table.systemlist td { padding: 7px; border-bottom: solid 1px #e8eef4; text-align:left; }
+table.systemlist th { text-align: left; background-color: White; border-bottom: solid 4px #e8eef4; }
+table.systemlist td.up { vertical-align:top; }
+.systemlist .bold { font-weight:bold; }
+.systemlist a { color:#666666; font-weight:bold; text-decoration:none; }
+.systemlist a.visited { color:#666666; }
+
+.io { font-family: Verdana, Helvetica, Sans-Serif; font-size:14px; }
+.io .section { font-weight:bold; font-weight:bold; color:#2166af; }
+.io .record { padding:4px 0px 4px 0px;} 
+.io .record .columnname { font-weight:bold; color:#333333;}
+.io .record .key { font-weight:bold; color:#2166af; padding-right:15px; }
+.io .record .example { color:#555555; font-size:14px;}
+.io .record .possiblevalues {}
+
+img { border-width:0px; border-style:none; }
+
+/* ************************************************************************
+Section: DIAGNOSTICS
+Description: CSS for the diagnostic information displayed at the bottom of
+the menu. This corresponds to the user:, env:, database: etc fields that 
+are displayed and useful for powerusers/admins/developers.
+************************************************************************** */
+#diagnostics { text-align:center; background-color:White; padding:3px 0px 5px 0px; color:Black; }
+#diagnostics .dev { color:#2166af; }
+#diagnostics .qa { color:#2166af; } 
+#diagnostics .uat { color:Orange; } 
+#diagnostics .prod { color:Red; }
+#diagnostics .dfield {	font-weight:bold; color: Black; }
+
+
+/* ************************************************************************
+Section: GALLERY
+Description: CSS for the diagnostic information displayed at the bottom of
+the menu. This corresponds to the user:, env:, database: etc fields that 
+are displayed and useful for powerusers/admins/developers.
+************************************************************************** */
+.gallery { border:solid 1px black; width:400px; }
+.gallery .name { color:#333333; font-size:15; padding:2px 2px 2px 2px;}
+.gallery .desc { color:#999999; font-size:13; padding:2px 2px 2px 2px;}
+.gallery .images { background-color: Black; text-align: center; padding: 0px 3px 5px 3px;}
+.gallery .images .detail {}
+.gallery .info {}
+.gallery .info .title { padding:2px 2px 2px 2px; font-weight:bold; color:#333333;}
+.gallery .info .caption { padding:2px 0 5px 0; color:#666666; font-size:11; text-align:center;}
+.gallery .number {padding:5px 0 5px 0; font-family:Verdana; color:#999999; font-size:9px; font-weight:normal; text-align:center;} 
+.gallery .navarea {background-color:Black; }
+.gallery .navarea .inner {background-color:Black; margin-left:auto; margin-right:auto; }
+.gallery .navarea .inner .nav { } 
+.gallery .navarea .inner .nav a { color:White; text-decoration: none; font-size:13px; }
+.gallery .navarea .inner .nav a:link { color:White; text-decoration: none; }
+.gallery .navarea .inner .nav a:visited { color:White; text-decoration: none; }
+.gallery .navarea .inner .nav a:hover { color:White; text-decoration: none; }
+.gallery .navarea .inner .list { } 
+.gallery .navarea .inner .list a { margin:2px 2px 2px 2px; }
+
+
+
+/* ************************************************************************
+Section: GridMenu
+Description: CSS for row menu in the management grid for entites.
+************************************************************************** */
+.gridmenu { background: none repeat scroll 0 0 #FFFFFF; border: 1px solid #666666; list-style: none outside none; margin: 1px 20px 0 0; padding: 0; position: absolute;  z-index: 999; }
+.gridmenu li { min-width: 80px; padding: 2px; }
+.gridmenu a { color: #7A7A7A; display: block; padding: 2px 10px 2px 18px; text-decoration: none; }
+.gridmenu a:hover { background-color: #F0F0F0; color: #666666; }
+.gridmenu a image { padding-right: 4px; }
+
+
+/* ************************************************************************
+Section: DASHBOARD
+Description: CSS for the diagnostic information displayed at the bottom of
+the menu. This corresponds to the user:, env:, database: etc fields that 
+are displayed and useful for powerusers/admins/developers.
+************************************************************************** */
+#dashboard { background-color:White; padding:5px 5px 5px 10px;}
+#dashboard .section { }
+#dashboard .header { color:#2166af; font-weight:bold; font-size:14px; background-color:#eeeeee; padding:3px 0px 3px 5px; }
+#dashboard a { text-decoration:none; color:#2166af; }
+#dashboard a.visited { color:#2166af; }
+#dashboard .bodyheader { color:#333333; font-weight:bold; font-size:13px; padding-left:5px; }
+#dashboard .body { }
+#dashboard li { list-style-type:none; padding-bottom:5px; }
+
+
+.widgetpart { border: 2px solid #999999; margin-bottom: 5px; margin-top: 5px; background-color:White;  }

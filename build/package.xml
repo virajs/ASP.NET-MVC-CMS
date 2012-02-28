@@ -1,0 +1,14 @@
+
+<project xmlns="http://nant.sf.net/release/0.85-rc3/nant.xsd" default="Package">
+	
+	
+	<target name="Package">			
+		
+		<zip zipfile="${dist.dir.root}\${app.name}_${build.version}_Sources.zip">
+		    <fileset basedir="${dist.dir}">
+		        <include name="**/*" />
+		    </fileset>
+		</zip>
+	</target>
+	
+</project>

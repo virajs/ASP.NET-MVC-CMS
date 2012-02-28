@@ -1,0 +1,113 @@
+VERSION:
+CommonLibrary.NET CMS 0.9.5 - Alpha 1
+
+*********************************************************************************
+0.9.5 ALPHA
+*********************************************************************************
+NEW FEATURES:
+	WIDGETS:
+		- Drag & Drop 
+			1. After logging in as admin, in home page -> click edit above widget -> drag header of widget above/below/left or right zone, click save.
+			2. After logging in as admin, go to appearance in dashboard -> widgets -> drag and drop rows of widgets, afterwards click save.
+		- Validation of widget data
+		- Ajax disabling of widgets
+		- Roles enabled for widgets
+		- Easy Configuration ( attributes applied to classes to represent widgets )
+		- Dynamic loading ( specify what assemblyies to search for widgets in web.config )
+
+	MODELS:
+		- Easy configuration ( attributes applied to classes to represent models )
+		- Dynamic loading ( specify what assemblyies to search for models in web.config )
+		- Improved config settings for permissions ( see /config/data/models.ini.config )
+		- Ajax / Json management of data ( all the models are managed using a light-weight grid that is ajax/json based to get records )
+		- Grid / Column chooser for data management
+		- Simplified customization 
+
+	UI
+		- DatePicker for date fields
+		- Simplified CSS
+		- Ajax Pager
+		- Improved Photo Gallery
+	
+KNOWN ISSUES:
+	- Uploading of images for an entity/model is current broken.
+	- Uploading of images for the user profile is currently broken.
+	
+	
+
+*********************************************************************************
+* 0.9.4 FINAL VERSION
+*********************************************************************************
+NEW FEATURES:
+	- Sql Server 2008 Express/Enterprise Integration
+	- Location ( City, State, Country ) Admin pages
+	- Media Storage ( Images )
+	- Image Gallery Component
+	- Category component
+	- Ability to add categories to posts/events
+	
+
+BUG FIXES:
+	- !!!! Fixed security issues related to removing data that is created by someone else
+	- Fixed permalink broken on index page.
+	- Fixed deleting log entries by log level
+	- Fixed email notifications are queued up before they are sent. The queue processing seems broken only for email, it's fine for applying tags.
+	- Fixed issues with creating / updating / deleting / canceling image files
+	- Fixed User Cloud widgets
+	- Fixed ability to upload photo to profile
+	- Added ability for admin to remove a user profile
+	
+	
+
+*********************************************************************************
+* 0.9.4 RC 1 FEATURES:  ( CURRENT RELEASE )
+*********************************************************************************
+NEW FEATURES:
+	- Sql Server 2008 Express/Enterprise Integration
+	- Location ( City, State, Country ) Admin pages
+	- Media Storage ( Images )
+	- Image Gallery Component
+	- Category component
+	- Ability to add categories to posts/events
+	
+
+BUG FIXES:
+	- Fixed "Comments" list page to only show the delete link.
+	- Fixed bug where the "Index Page Size" in Post settings is not used.
+	- Fixed menu item not being immediately visible after changes. This only involves disabling the cache for menu items by default
+	- Fixed display of a static url e.g. "http://bing.com" applied to a menu item.
+	- Fixed displaying of details page for Feedback
+	- Fixed deleting, editing, copying an entity that has just been deleted throws error.
+	- Fixed favorites not being accessbile by user
+	- Fixed comment fields so that they are cleared after adding a comment.
+	- Fixed Page/Post to support input of html.
+	- Fixed not showing maps controls on event details page if event is online.
+
+
+KNOWN ISSUES:
+	- Events page size in dashboard "post" settings has no effect
+	- Admin pages do not have page title
+	- Delete action should have confirmation
+	- Remember me feature when logging in does not work
+	- Comment verification code needs to be reset after adding a comment.
+	- Comment management should be managed by group(post/event).
+	- Comment management should have link back to its post
+	- Normal user should have access to "favorites", "import" / "export".
+	- Roles features needs to be more fine-grained
+	- Click an user profile. Delete it.   Now click "Manage Profile".  Exception. 
+	- Changing layout to "Single Side Bar Right".  It is not getting reflected.  Left side widgets still appear.  
+	- If I a click an item in Links widget,  it should be opened in a new window. 
+
+	
+
+TODO:
+
+- UI fixes(time chooser, WYSIWYG editor)
+- Tracking/linkback support
+- BlogML support
+- Reports / sql quering for admin
+- REST API
+- In-Memory Repositories to be persisted to CSV/Json files. Supporting file based storage.
+- Plugin-Pages ( Pages that can support loading in multiple widgets )
+- Allow Javascript/Menu controls to be "overriden" in Themes
+

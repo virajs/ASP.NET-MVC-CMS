@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibrary.CMS", "..\src\apps\CommonLibrary.CMS\CommonLibrary.CMS.csproj", "{DF85D71D-08ED-4C9C-BD1A-84639E3CF43C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibrary.CMS.Console", "..\src\apps\CommonLibrary.CMS.Console\CommonLibrary.CMS.Console.csproj", "{28F0E161-5068-4EE0-96B1-41FB6F9D8ABA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibrary.Web.Modules", "..\src\lib\CommonLibrary.Web.Modules\CommonLibrary.Web.Modules.csproj", "{4990097E-BAFB-433E-A26F-DC8DCFC7601F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibrary.Web.Modules.Tests", "..\src\tests\CommonLibrary.Web.Modules.Tests\CommonLibrary.Web.Modules.Tests.csproj", "{F4960065-28F2-4091-A032-FED900D0ECA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibrary.Web.Lib", "..\src\lib\CommonLibrary.Web.Lib\CommonLibrary.Web.Lib.csproj", "{3CEDEA03-BA50-4A71-9CE1-3C5E10C90D45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF85D71D-08ED-4C9C-BD1A-84639E3CF43C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF85D71D-08ED-4C9C-BD1A-84639E3CF43C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF85D71D-08ED-4C9C-BD1A-84639E3CF43C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF85D71D-08ED-4C9C-BD1A-84639E3CF43C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F0E161-5068-4EE0-96B1-41FB6F9D8ABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F0E161-5068-4EE0-96B1-41FB6F9D8ABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F0E161-5068-4EE0-96B1-41FB6F9D8ABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F0E161-5068-4EE0-96B1-41FB6F9D8ABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4990097E-BAFB-433E-A26F-DC8DCFC7601F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4990097E-BAFB-433E-A26F-DC8DCFC7601F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4990097E-BAFB-433E-A26F-DC8DCFC7601F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4990097E-BAFB-433E-A26F-DC8DCFC7601F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4960065-28F2-4091-A032-FED900D0ECA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4960065-28F2-4091-A032-FED900D0ECA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4960065-28F2-4091-A032-FED900D0ECA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4960065-28F2-4091-A032-FED900D0ECA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CEDEA03-BA50-4A71-9CE1-3C5E10C90D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CEDEA03-BA50-4A71-9CE1-3C5E10C90D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CEDEA03-BA50-4A71-9CE1-3C5E10C90D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CEDEA03-BA50-4A71-9CE1-3C5E10C90D45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

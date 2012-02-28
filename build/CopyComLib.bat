@@ -1,0 +1,2 @@
+copy C:\dev\business\CommonLibrary.NET\CommonLibraryNet_LATEST\src\Lib\CommonLibrary.NET\bin\Debug\Commonlibrary.dll C:\dev\business\cms\CommonLibrary.CMS_CMS\lib\Internal\CommonLibrary.NET\CommonLibrary.dll
+copy C:\dev\business\CommonLibrary.NET\CommonLibraryNet_LATEST\src\Lib\CommonLibrary.NET\bin\Debug\Commonlibrary.pdb C:\dev\business\cms\CommonLibrary.CMS_CMS\lib\Internal\CommonLibrary.NET\CommonLibrary.pdb
